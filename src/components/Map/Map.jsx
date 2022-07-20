@@ -6,9 +6,11 @@ import Rating from '@material-ui/lab'
 
 import useStyles from './styles'
 
-const Map = ({ setCoordinates, setBounds, coordinates}) =>{
+const Map = () =>{
     const classes = useStyles()
     const isMobile = useMediaQuery('(mid-width:600px)')
+
+    const coordinates = { lat: 0, lng:0}
 
     return (
         <div className={classes.mapContainer}>
@@ -19,12 +21,7 @@ const Map = ({ setCoordinates, setBounds, coordinates}) =>{
             defaultZoom={14}
             margin={[50,50,50,50]}
             options={''}
-            onChange={(e)=>{
-                console.log(e)
-                setCoordinates({lat: e.center.lat, 
-                                lng: e.center.lng
-                                })
-            }}
+            onChange={''}
             onChildClick={''}
             >
 
